@@ -126,13 +126,15 @@ def process_ranknet(policy, X, y, loss_fct, device, optimizer=None):
     mean_loss = 0
     mean_acc = 0
     n_samples_processed = 0
-    X.to(device)
-
+    X = X.to(device)
+    y = y.to(device)
     with torch.set_grad_enabled(optimizer is not None):
         for idx,x in enumerate(X):
             yi = y[idx].to(device)
             y_true = 0.5*yi + 0.5 #0,1 label from -1,1 label
             y_proba = policy(x[:20].to(device), x[20:].to(device))
+            if torch.isnan(y_proba).item():
+                continue
             y_pred = torch.round(y_proba)
             
             # Compute the usual cross-entropy classification loss

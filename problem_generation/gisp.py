@@ -120,7 +120,7 @@ def distribute(n_instance, n_cpu):
 
 if __name__ == "__main__":
     instance = None
-    n_cpu = 4
+    n_cpu = 16
     exp_dir = "data/GISP/"
     data_partition = None
     min_n = 60
@@ -130,10 +130,10 @@ if __name__ == "__main__":
     setParam = 100.0
     alphaE2 = 0.5
     timelimit = 7200.0
-    solveInstance = False
-    n_instance = 100
+    solveInstance = True
+    n_instance = 1000
     seed = 0
-    data_partition = 'test'
+    data_partition = 'train'
     
 
     # seed = 0

@@ -1,0 +1,264 @@
+10 percent training...
+-------------------------
+GNN for problem FCMCNF
+Training on:          1629 samples
+Validating on:        1784 samples
+Batch Size Train:     16
+Batch Size Valid      16
+Learning rate:        0.005 
+Number of epochs:     2
+Normalize:            True
+Device:               cuda
+Loss fct:             BCELoss()
+Optimizer:            <class 'torch.optim.adam.Adam'>
+Model's Size:         1050 parameters 
+-------------------------
+Epoch 1
+Train loss: 0.398, accuracy 0.950
+Valid loss: 0.086, accuracy 0.945
+Epoch 2
+Train loss: 0.069, accuracy 0.951
+Valid loss: 0.083, accuracy 0.945
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：109.8611626625061秒
+======================================================
+Statistics on FCMCNF for problem size in [22, 22]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  20.51  ± 5.27
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           2.77
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  3.62  ± 1.48
+           |---   On-GPU Feature Updates:        0.00
+           |---   Feature Normalization:         0.00
+           |---   Inference     :                0.03
+        |- nodecomp calls  :  390
+           |---   inference nodecomp calls:      54
+        |- nodesel calls   :  69
+-------------------------------------------------
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：519.9548087120056秒
+======================================================
+Statistics on FCMCNF for problem size in [30, 30]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  129.54  ± 4.92
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           16.54
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  19.98  ± 1.92
+           |---   On-GPU Feature Updates:        0.02
+           |---   Feature Normalization:         0.02
+           |---   Inference     :                0.12
+        |- nodecomp calls  :  2741
+           |---   inference nodecomp calls:      562
+        |- nodesel calls   :  330
+-------------------------------------------------
+-------------------------
+GNN for problem GISP
+Training on:          4200 samples
+Validating on:        4200 samples
+Batch Size Train:     16
+Batch Size Valid      16
+Learning rate:        0.005 
+Number of epochs:     2
+Normalize:            True
+Device:               cuda
+Loss fct:             BCELoss()
+Optimizer:            <class 'torch.optim.adam.Adam'>
+Model's Size:         1050 parameters 
+-------------------------
+Epoch 1
+Train loss: 0.164, accuracy 0.963
+Valid loss: 0.054, accuracy 0.975
+Epoch 2
+Train loss: 0.051, accuracy 0.978
+Valid loss: 0.054, accuracy 0.975
+Evaluation
+  Problem:                    GISP
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：89.90116763114929秒
+======================================================
+Statistics on GISP for problem size in [60, 70]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  174.66  ± 2.80
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           0.61
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  3.96  ± 1.26
+           |---   On-GPU Feature Updates:        0.00
+           |---   Feature Normalization:         0.00
+           |---   Inference     :                0.02
+        |- nodecomp calls  :  2005
+           |---   inference nodecomp calls:      17
+        |- nodesel calls   :  251
+-------------------------------------------------
+Evaluation
+  Problem:                    GISP
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：284.4753894805908秒
+======================================================
+Statistics on GISP for problem size in [80, 100]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  1188.62  ± 1.75
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           2.21
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  18.61  ± 1.52
+           |---   On-GPU Feature Updates:        0.00
+           |---   Feature Normalization:         0.00
+           |---   Inference     :                0.02
+        |- nodecomp calls  :  19112
+           |---   inference nodecomp calls:      17
+        |- nodesel calls   :  1432
+-------------------------------------------------
+-------------------------
+GNN for problem WPMS
+Training on:          4200 samples
+Validating on:        4200 samples
+Batch Size Train:     16
+Batch Size Valid      16
+Learning rate:        0.005 
+Number of epochs:     2
+Normalize:            True
+Device:               cuda
+Loss fct:             BCELoss()
+Optimizer:            <class 'torch.optim.adam.Adam'>
+Model's Size:         1050 parameters 
+-------------------------
+Epoch 1
+Train loss: 0.156, accuracy 0.953
+Valid loss: 0.062, accuracy 0.957
+Epoch 2
+Train loss: 0.066, accuracy 0.956
+Valid loss: 0.062, accuracy 0.958
+Evaluation
+  Problem:                    WPMS
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：175.14859318733215秒
+======================================================
+Statistics on WPMS for problem size in [445, 923]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  146.07  ± 2.88
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           2.52
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  6.38  ± 1.92
+           |---   On-GPU Feature Updates:        0.03
+           |---   Feature Normalization:         0.04
+           |---   Inference     :                0.20
+        |- nodecomp calls  :  2451
+           |---   inference nodecomp calls:      742
+        |- nodesel calls   :  238
+-------------------------------------------------
+Evaluation
+  Problem:                    WPMS
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：224.19724655151367秒
+======================================================
+Statistics on WPMS for problem size in [632, 1098]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  243.61  ± 2.24
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           3.65
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  9.50  ± 1.70
+           |---   On-GPU Feature Updates:        0.03
+           |---   Feature Normalization:         0.04
+           |---   Inference     :                0.19
+        |- nodecomp calls  :  3276
+           |---   inference nodecomp calls:      619
+        |- nodesel calls   :  320
+-------------------------------------------------
+Full training...
+-------------------------
+GNN for problem FCMCNF
+Training on:          16290 samples
+Validating on:        1784 samples
+Batch Size Train:     16
+Batch Size Valid      16
+Learning rate:        0.005 
+Number of epochs:     2
+Normalize:            True
+Device:               cuda
+Loss fct:             BCELoss()
+Optimizer:            <class 'torch.optim.adam.Adam'>
+Model's Size:         1050 parameters 
+-------------------------
+Epoch 1
+Train loss: 0.097, accuracy 0.956
+Valid loss: 0.079, accuracy 0.945
+Epoch 2
+Train loss: 0.063, accuracy 0.957
+Valid loss: 0.079, accuracy 0.943
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：115.5140597820282秒
+======================================================
+Statistics on FCMCNF for problem size in [22, 22]
+======================================================
+  gnn_dummy_nprimal=2 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  22.31  ± 5.38
+        |- Presolving A,b,c Feature Extraction Time :  
+           |---   Init. Solver to CPU:           2.78
+           |---   Init. CPU to GPU   :           0.00
+        |- Solving Time    :  3.60  ± 1.47
+           |---   On-GPU Feature Updates:        0.00
+           |---   Feature Normalization:         0.00
+           |---   Inference     :                0.02
+        |- nodecomp calls  :  405
+           |---   inference nodecomp calls:      52
+        |- nodesel calls   :  71
+-------------------------------------------------
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    ,gnn_dummy_nprimal=2
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------

@@ -336,14 +336,15 @@ class OracleNodeSelectorEstimator_SVM(CustomNodeSelector):
     
 class OracleNodeSelectorEstimator(CustomNodeSelector):
     
-    def __init__(self, problem, comp_featurizer, device, feature_normalizor, n_primal=2, use_trained_gnn=True, sel_policy=''):
+    def __init__(self, problem, comp_featurizer, device, feature_normalizor, n_primal=2, use_trained_gnn=True, sel_policy='',avoid_same_comp =False):
         super().__init__(sel_policy=sel_policy)
         
         
         
         policy = GNNPolicy()
         if use_trained_gnn: 
-            policy.load_state_dict(torch.load(f"./learning/policy_{problem}.pkl", map_location=device)) #run from main
+            #policy.load_state_dict(torch.load(f"./learning/policy_{problem}.pkl", map_location=device)) #run from main
+            policy.load_state_dict(torch.load(f"./policy_{problem}.pkl", map_location=device)) #run from main
         else:
             print("Using randomly initialized gnn")
             
@@ -364,8 +365,11 @@ class OracleNodeSelectorEstimator(CustomNodeSelector):
         self.inf_counter = 0
         
         self.scores = dict()
-        
-        
+        # this use to not make diff nodecomp res, for (node1, node2) 
+        # there may many time same nodecomp and SCIP will not work 
+        # so here modify comp res make SCIP work
+        self.avoid_same_comp = avoid_same_comp
+        self.comparison_results = {}
         
     def set_LP_feature_recorder(self, LP_feature_recorder):
         self.comp_featurizer.set_LP_feature_recorder(LP_feature_recorder)
@@ -396,7 +400,13 @@ class OracleNodeSelectorEstimator(CustomNodeSelector):
         if curr_primal < self.best_primal:
             self.best_primal = curr_primal
             self.primal_changes += 1
-            
+
+        n_idx1,n_idx2 = node1.getNumber(), node2.getNumber()
+
+        if (n_idx1, n_idx2) in self.comparison_results:
+            if self.avoid_same_comp:
+                #print(f'same node compare, return diff result')
+                return 1 if self.comparison_results[(n_idx1, n_idx2)] == -1 else -1            
             
         #begin inference process
         comp_scores = [-1,-1]
@@ -424,5 +434,5 @@ class OracleNodeSelectorEstimator(CustomNodeSelector):
                 self.inference_time += (time.time() - start)
                 
         self.inf_counter += 1
-        
+        self.comparison_results[(n_idx1, n_idx2)] = -1 if comp_scores[0] > comp_scores[1] else 1
         return -1 if comp_scores[0] > comp_scores[1] else 1

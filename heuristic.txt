@@ -1,0 +1,186 @@
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：120.25618481636047秒
+======================================================
+Statistics on FCMCNF for problem size in [22, 22]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  40.74  ± 4.57
+        |- Solving Time    :  4.07  ± 1.44
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  14.99  ± 4.13
+        |- Solving Time    :  3.27  ± 1.42
+        |- nodecomp calls  :  200
+           |---   inference nodecomp calls:      18
+        |- nodesel calls   :  42
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  21.40  ± 5.32
+        |- Solving Time    :  3.46  ± 1.48
+        |- nodecomp calls  :  414
+        |- nodesel calls   :  74
+-------------------------------------------------
+Evaluation
+  Problem:                    FCMCNF
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：909.4064757823944秒
+======================================================
+Statistics on FCMCNF for problem size in [30, 30]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  178.45  ± 4.30
+        |- Solving Time    :  21.43  ± 1.86
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  74.59  ± 4.46
+        |- Solving Time    :  15.92  ± 1.73
+        |- nodecomp calls  :  1041
+           |---   inference nodecomp calls:      36
+        |- nodesel calls   :  178
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  122.37  ± 5.14
+        |- Solving Time    :  18.80  ± 1.93
+        |- nodecomp calls  :  2756
+        |- nodesel calls   :  365
+-------------------------------------------------
+Evaluation
+  Problem:                    GISP
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：96.1387197971344秒
+======================================================
+Statistics on GISP for problem size in [60, 70]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  184.27  ± 1.96
+        |- Solving Time    :  3.79  ± 1.18
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  98.00  ± 3.29
+        |- Solving Time    :  3.55  ± 1.25
+        |- nodecomp calls  :  1191
+           |---   inference nodecomp calls:      25
+        |- nodesel calls   :  168
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  218.06  ± 2.47
+        |- Solving Time    :  3.90  ± 1.25
+        |- nodecomp calls  :  2220
+        |- nodesel calls   :  284
+-------------------------------------------------
+Evaluation
+  Problem:                    GISP
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：700.6266691684723秒
+======================================================
+Statistics on GISP for problem size in [80, 100]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  1533.48  ± 1.85
+        |- Solving Time    :  15.57  ± 1.49
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  1062.20  ± 1.81
+        |- Solving Time    :  18.07  ± 1.53
+        |- nodecomp calls  :  16449
+           |---   inference nodecomp calls:      48
+        |- nodesel calls   :  1302
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  1434.95  ± 1.84
+        |- Solving Time    :  19.90  ± 1.67
+        |- nodecomp calls  :  26341
+        |- nodesel calls   :  2012
+-------------------------------------------------
+Evaluation
+  Problem:                    WPMS
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：245.02705645561218秒
+======================================================
+Statistics on WPMS for problem size in [445, 923]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  147.09  ± 1.96
+        |- Solving Time    :  7.78  ± 1.49
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  102.16  ± 2.48
+        |- Solving Time    :  5.15  ± 1.74
+        |- nodecomp calls  :  889
+           |---   inference nodecomp calls:      17
+        |- nodesel calls   :  154
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  176.58  ± 2.33
+        |- Solving Time    :  6.69  ± 1.70
+        |- nodecomp calls  :  1509
+        |- nodesel calls   :  246
+-------------------------------------------------
+Evaluation
+  Problem:                    WPMS
+  n_instance/problem:         50
+  Nodeselectors evaluated:    default,expert_dummy,estimate_dummy
+  Device for GNN inference:   cuda
+  Normalize features:         True
+----------------
+程序运行时间：304.5220396518707秒
+======================================================
+Statistics on WPMS for problem size in [632, 1098]
+======================================================
+  default 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  170.92  ± 1.66
+        |- Solving Time    :  10.51  ± 1.35
+-------------------------------------------------
+  expert_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  160.33  ± 2.00
+        |- Solving Time    :  7.27  ± 1.51
+        |- nodecomp calls  :  1166
+           |---   inference nodecomp calls:      19
+        |- nodesel calls   :  201
+-------------------------------------------------
+  estimate_dummy 
+      Mean over n=50 instances : 
+        |- B&B Tree Size   :  247.01  ± 1.84
+        |- Solving Time    :  9.71  ± 1.54
+        |- nodecomp calls  :  2051
+        |- nodesel calls   :  314
+-------------------------------------------------

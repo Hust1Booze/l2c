@@ -15,10 +15,11 @@ from pathlib import Path
 from model import GNNPolicy
 from data_type import GraphDataset
 from utils import process
+import numpy as np
 
 if __name__ == "__main__":
     
-    problem = "GISP"
+    problem = "FCMCNF"
     lr = 0.005
     n_epoch = 2
     n_sample = -1
@@ -27,8 +28,9 @@ if __name__ == "__main__":
     normalize = True
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     batch_train = 16
-    batch_valid  = 256
-    
+    batch_valid  = 16
+    data_type = 0 
+
     loss_fn = torch.nn.BCELoss()
     optimizer_fn = torch.optim.Adam
     
@@ -53,8 +55,14 @@ if __name__ == "__main__":
             batch_train = int(sys.argv[i + 1])
         if sys.argv[i] == '-batch_valid':
             batch_valid = int(sys.argv[i + 1])
+        if sys.argv[i] == '-data_type':
+            data_type = int(sys.argv[i + 1])
             
-  
+    seed = 0
+      # 设置随机种子
+    torch.manual_seed(seed)                # 设置 PyTorch 的全局随机种子
+    torch.cuda.manual_seed(seed)          # 设置 GPU 上的随机种子
+    np.random.seed(seed)                  # 设置 NumPy 的随机种子
     
     train_losses = []
     valid_losses = []
@@ -68,10 +76,22 @@ if __name__ == "__main__":
     valid_files = [ str(path) for path in Path(os.path.join(os.path.dirname(__file__), 
                                                             f"../node_selection/data/{problem}/valid")).glob("*.pt") ][:int(0.2*n_sample if n_sample != -1 else -1)]
     
+    if problem in ['GISP','WPMS']:
+        train_samples = 42000
+        valid_samples = 4200
+    elif problem in ['FCMCNF']:
+        train_samples = 16290
+        valid_samples = 3020
 
-    if problem == 'FCMCNF':
-        train_files = train_files + valid_files[3000:]
-        valid_files = valid_files[:3000]
+    if data_type == 1:
+        train_samples = int(train_samples/10)
+    train_files = train_files[:train_samples] 
+    valid_files = valid_files[:valid_samples]
+
+
+    # if problem == 'FCMCNF':
+    #     train_files = train_files + valid_files[3000:]
+    #     valid_files = valid_files[:3000]
 
         
 

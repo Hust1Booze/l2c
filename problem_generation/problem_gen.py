@@ -34,13 +34,13 @@ def distribute(n_instance, n_cpu):
 
 if __name__ == "__main__":
     instance = None
-    n_cpu = 4
-    n_instance = 4
+    n_cpu = 16
+    n_instance = 100
     
-    problem = 'GISP'
-    data_partition = 'train'
+    problem = 'FCMCNF'
+    data_partition = 'valid'
     n_nodes = 50
-    er_prob = 0.6 #0.33 for FCMCNF, this doesnt change
+    er_prob = 0.33 #0.33 for FCMCNF, this doesnt change
     whichSet = 'SET2'
     setParam = 100.0
     alphaE2 = 0.5
@@ -51,8 +51,8 @@ if __name__ == "__main__":
     
     #Graph number of nodes, good sizes are 80-100 for GISP, 27-29 for FCMCNF, 70-80 for WPMSP
     
-    min_n = 60
-    max_n = 70
+    min_n = 15
+    max_n = 15
     
     # seed = 0
     for i in range(1, len(sys.argv), 2):
@@ -134,6 +134,7 @@ if __name__ == "__main__":
                                                                       max_n,
                                                                       min_n_commodities,
                                                                       max_n_commodities,
+                                                                      er_prob,
                                                                       lp_dir, 
                                                                       solveInstance))
                       

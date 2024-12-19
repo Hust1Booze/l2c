@@ -30,10 +30,10 @@ def get_data(files):
     return np.array(X, dtype=np.float32), np.array(y, dtype=np.long), np.array(depths)
 
 
-    
+
 if __name__ == "__main__":
     
-    problem = "WPMS"
+    problem = "GISP"
     lr = 0.005
     n_epoch = 2
     n_sample = -1

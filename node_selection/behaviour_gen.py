@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
     
     oracle = 'optimal_plunger'
-    problem = 'GISP'
+    problem = 'FCMCNF'
     data_partitions = ['train', 'valid'] #dont change
     n_cpu = 10
     n_instance = -1
